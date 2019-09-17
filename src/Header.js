@@ -5,22 +5,22 @@ const Header = () => {
     <nav>
       <ul className="nav-container">
         <li className="nav_item left">
-          <a href="1" className="">
+          <a href="#">
             <i className="fab fa-ethereum nav_link"></i>
           </a>
         </li>
         <li className="nav_item">
-          <a className="nav_link" href="2">
+          <a className="nav_link" href="#">
             Hem
           </a>
         </li>
         <li className="nav_item">
-          <a className="nav_link" href="3">
+          <a className="nav_link" href="#">
             Kontakt
           </a>
         </li>
         <li className="nav_item">
-          <a className="nav_link" href="4">
+          <a className="nav_link" href="#">
             Logga in
           </a>
         </li>
