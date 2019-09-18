@@ -4,7 +4,7 @@ import { SECTIONS as sections } from "./data";
 
 function HomePage() {
   return (
-    <div className="homepage">
+    <div style={{ display: "flex", flexWrap: "wrap", marginTop: 20 }}>
       {sections.map(item => (
         <HomeItem key={item.id} {...item} />
       ))}

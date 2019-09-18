@@ -3,24 +3,24 @@ import React from "react";
 const Header = () => {
   return (
     <nav>
-      <ul className="nav-container">
-        <li className="nav_item left">
+      <ul className="nav__container">
+        <li className="nav__item flex__left">
           <a href="#">
-            <i className="fab fa-ethereum nav_link"></i>
+            <i className="far fa-gem nav__link"></i>
           </a>
         </li>
-        <li className="nav_item">
-          <a className="nav_link" href="#">
+        <li className="nav__item">
+          <a className="nav__link" href="#">
             Hem
           </a>
         </li>
-        <li className="nav_item">
-          <a className="nav_link" href="#">
+        <li className="nav__item">
+          <a className="nav__link" href="#">
             Kontakt
           </a>
         </li>
-        <li className="nav_item">
-          <a className="nav_link" href="#">
+        <li className="nav__item">
+          <a className="nav__link" href="#">
             Logga in
           </a>
         </li>

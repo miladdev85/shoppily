@@ -1,0 +1,21 @@
+.nav__container {
+  padding: 0;
+  list-style: none;
+  font-size: 2.6rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  color: rgb(152, 152, 152);
+}
+
+.nav__link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__item {
+  padding: 15px;
+}
