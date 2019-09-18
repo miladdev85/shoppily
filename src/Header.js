@@ -1,28 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <nav>
       <ul className="nav__container">
         <li className="nav__item flex__left">
-          <a href="#">
+          <Link to="/">
             <i className="far fa-gem nav__link"></i>
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href="#">
+          <Link to="/" className="nav__link" href="_">
             Hem
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href="#">
+          <Link to="/kontakt" className="nav__link" href="_">
             Kontakt
-          </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a className="nav__link" href="#">
+          <Link to="/login" className="nav__link" href="_">
             Logga in
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

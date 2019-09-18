@@ -1,13 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const HomeItem = ({ title, imageUrl, size }) => {
+const HomeItem = ({ title, id, sectionImage, size, url }) => {
   return (
-    <div className={`${size} home-item`}>
-      <div style={{ backgroundImage: `url(${imageUrl})` }} className="home__background-image" />
+    <Link
+      to={{ pathname: `avdelning/${url}`, search: `?sectionId=${id}` }}
+      className={`${size} home__item`}
+    >
+      <div
+        style={{ backgroundImage: `url(http://localhost:1337${sectionImage.url})` }}
+        className="home__background-image"
+      />
       <div className="home__content">
-        <h2 style={{ fontSize: "2.3rem" }}>{title}</h2>
+        <h2 style={{ fontSize: "2.4rem" }}>{title}</h2>
       </div>
-    </div>
+    </Link>
   );
 };
 

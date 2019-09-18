@@ -1,13 +1,16 @@
 import React from "react";
 import Header from "./Header";
 import HomePage from "./HomePage";
+import Section from "./Section";
+import { Route } from "react-router-dom";
 import "./styles/styles.scss";
 
 function App() {
   return (
-    <div className="container my-5">
+    <div className="container_">
       <Header />
-      <HomePage />
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/avdelning/:id" component={Section} />
     </div>
   );
 }

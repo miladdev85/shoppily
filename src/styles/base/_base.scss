@@ -19,3 +19,25 @@ body {
 .flex__right {
   margin-left: auto;
 }
+
+.container_ {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container_ {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container_ {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container_ {
+    width: 1170px;
+  }
+}
