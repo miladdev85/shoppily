@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import queryString from "query-string";
 import axios from "axios";
 import { mainSections, sectionId } from "./Network";
 import SectionItem from "./SectionItem";
@@ -11,7 +10,6 @@ const Section = ({ match }) => {
   useEffect(() => {
     const getItems = async () => {
       const response = await axios.get(`${mainSections}/${sectionId[match.params.id]}`);
-      console.log(response.data.products);
       setProducts(response.data.products);
       setTitle(response.data.title);
     };
