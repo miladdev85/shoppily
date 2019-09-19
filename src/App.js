@@ -7,11 +7,11 @@ import "./styles/styles.scss";
 
 function App() {
   return (
-    <div className="container_">
+    <main className="container_">
       <Header />
       <Route exact path="/" component={HomePage} />
       <Route exact path="/avdelning/:id" component={Section} />
-    </div>
+    </main>
   );
 }
 

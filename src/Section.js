@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
-import queryString from "query-string";
+// import queryString from "query-string";
 import axios from "axios";
+import { mainSections, sectionId } from "./Network";
 import SectionItem from "./SectionItem";
 
-const Section = props => {
+const Section = ({ match }) => {
   const [products, setProducts] = useState([]);
   const [title, setTitle] = useState("");
-  const parsed = queryString.parse(props.location.search);
 
   useEffect(() => {
     const getItems = async () => {
-      const response = await axios.get(`http://localhost:1337/sections/${parsed.sectionId}`);
+      const response = await axios.get(`${mainSections}/${sectionId[match.params.id]}`);
       console.log(response.data.products);
       setProducts(response.data.products);
       setTitle(response.data.title);
     };
     getItems();
-  }, [parsed.sectionId]);
+  }, [match.params.id]);
 
   return (
     <div>
