@@ -18,10 +18,12 @@ const Section = ({ match }) => {
 
   return (
     <div>
-      <h1>{title}</h1>
-      {products.map(product => (
-        <SectionItem key={product.id} {...product} />
-      ))}
+      <h1 style={{ textAlign: "center", marginBottom: 30 }}>{title}</h1>
+      <div className="row">
+        {products.map(product => (
+          <SectionItem key={product.id} {...product} />
+        ))}
+      </div>
     </div>
   );
 };

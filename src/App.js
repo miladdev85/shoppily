@@ -7,7 +7,7 @@ import "./styles/styles.scss";
 
 function App() {
   return (
-    <main className="container_">
+    <main style={{ minHeight: "100vh" }} className="contain">
       <Header />
       <Route exact path="/" component={HomePage} />
       <Route exact path="/avdelning/:id" component={Section} />

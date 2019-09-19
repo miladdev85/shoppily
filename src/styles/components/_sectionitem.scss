@@ -1,0 +1,22 @@
+.product__image {
+  height: 345px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2px;
+}
+
+.product__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #717171;
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 900px) {
+  .product__image {
+    height: 220px;
+    width: 100%;
+  }
+}

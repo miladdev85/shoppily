@@ -9,14 +9,13 @@ function HomePage() {
   useEffect(() => {
     const getSections = async () => {
       const response = await axios.get(network.sections);
-      console.log(response.data);
       setSections(response.data);
     };
     getSections();
   }, []);
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div style={{ display: "flex", flexWrap: "wrap", marginTop: "20px" }}>
       {sections
         .sort((a, b) => !b.size - !a.size)
         .map(item => (

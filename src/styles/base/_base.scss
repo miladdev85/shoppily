@@ -20,24 +20,24 @@ body {
   margin-left: auto;
 }
 
-.container_ {
+.contain {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 @media (min-width: 768px) {
-  .container_ {
+  .contain {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container_ {
+  .contain {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container_ {
+  .contain {
     width: 1170px;
   }
 }
