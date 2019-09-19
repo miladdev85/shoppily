@@ -11,6 +11,10 @@ const Overlay = styled.h2`
     background-color: rgb(170, 170, 170);
     color: white;
   }
+  @media screen and (max-width: 900px) {
+    font-size: 1.6rem;
+    padding: 4px 6px 4px 6px;
+  }
 `;
 
 const SectionItem = props => {
