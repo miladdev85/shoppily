@@ -18,8 +18,8 @@ export class Form extends Component {
     const { nameInput, mailInput, password } = this.state;
     return (
       <div>
-        {/* These component could also take in props. Placeholder, Did this in 5 minutes. Just want to
-        check if I have understood the question correctly. */}
+        {/* These component could also take in props. Placeholder, Did this in 5 minutes. Just want to check if I have understood the question correctly. We could also just have one
+        component and give it all props such as value, type, id, placeholder etc. */}
 
         <NameInput onChange={this.onChange} value={nameInput} />
         <MailInput onChange={this.onChange} value={mailInput} />
