@@ -6,7 +6,8 @@ import PasswordInput from "./PasswordInput";
 export class Form extends Component {
   state = {
     nameInput: "",
-    mailInput: ""
+    mailInput: "",
+    password: ""
   };
 
   onChange = e => {
@@ -14,11 +15,15 @@ export class Form extends Component {
   };
 
   render() {
+    const { nameInput, mailInput, password } = this.state;
     return (
       <div>
-        <NameInput onChange={this.onChange} />
-        <MailInput onChange={this.onChange} />
-        <PasswordInput onChange={this.onChange} />
+        {/* These component could also take in props. Placeholder, Did this in 5 minutes. Just want to
+        check if I have understood the question correctly. */}
+
+        <NameInput onChange={this.onChange} value={nameInput} />
+        <MailInput onChange={this.onChange} value={mailInput} />
+        <PasswordInput onChange={this.onChange} value={password} />
       </div>
     );
   }
