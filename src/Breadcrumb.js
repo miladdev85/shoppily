@@ -23,7 +23,6 @@ const Title = styled.p`
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
-  text-decoration: none;
   transition: background-size 0.2s;
   &:hover {
     background-size: 1px 26px;
