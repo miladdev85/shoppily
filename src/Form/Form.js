@@ -58,18 +58,23 @@ export class Form extends Component {
 
     if (!errorMessage) isValid = true;
 
-    let formValid = true;
+    this.setState(
+      {
+        inputs: { ...this.state.inputs, ...{ [name]: { value: value, errorMessage, isValid } } }
+      },
+      () => this.validateForm()
+    );
+  };
 
+  validateForm = () => {
+    let formValid = true;
     for (let inputName in this.state.inputs) {
       if (!this.state.inputs[inputName].isValid && formValid) {
         formValid = false;
       }
     }
 
-    this.setState({
-      inputs: { ...this.state.inputs, ...{ [name]: { value: value, errorMessage, isValid } } },
-      formValid
-    });
+    this.setState({ formValid });
   };
 
   onSubmit = e => {
