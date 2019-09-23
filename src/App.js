@@ -33,20 +33,18 @@ function App() {
       {isLoading ? (
         <Loading />
       ) : (
-        <>
-          <Route exact path="/" render={() => <HomePage sections={sections} />} />
-          <Route
-            exact
-            path="/avdelning/:id"
-            render={props => (
-              <>
-                <Breadcrumb sections={sections} {...props} />
-                <Section {...props} />
-              </>
-            )}
-          />
-        </>
+        <Route exact path="/" render={() => <HomePage sections={sections} />} />
       )}
+      <Route
+        exact
+        path="/avdelning/:id"
+        render={props => (
+          <>
+            <Breadcrumb sections={sections} {...props} />
+            <Section {...props} />
+          </>
+        )}
+      />
     </main>
   );
 }

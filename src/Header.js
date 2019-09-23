@@ -11,18 +11,8 @@ const Header = () => {
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/" className="nav__link" href="_">
-            Hem
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link to="/kontakt" className="nav__link" href="_">
-            Kontakt
-          </Link>
-        </li>
-        <li className="nav__item">
-          <Link to="/login" className="nav__link" href="_">
-            Logga in
+          <Link to="/projektet" className="nav__link" href="_">
+            Om detta projekt
           </Link>
         </li>
       </ul>
