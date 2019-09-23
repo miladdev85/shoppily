@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
 import axios from "axios";
-import { mainSections, sectionId } from "./Network";
+import { mainSections, sectionId } from "./Utils/Network";
 import SectionItem from "./SectionItem";
 
 const Section = ({ match }) => {

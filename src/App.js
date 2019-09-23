@@ -3,8 +3,9 @@ import Header from "./Header";
 import HomePage from "./HomePage";
 import Section from "./Section";
 import Breadcrumb from "./Breadcrumb";
+import About from "./About";
 import Loading from "./Loading";
-import * as network from "./Network";
+import * as network from "./Utils/Network";
 import axios from "axios";
 import { Route } from "react-router-dom";
 import "./styles/styles.scss";
@@ -45,6 +46,7 @@ function App() {
           </>
         )}
       />
+      <Route exact path="/projektet" component={About} />
     </main>
   );
 }
