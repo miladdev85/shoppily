@@ -1,0 +1,33 @@
+.custom__button {
+  min-width: 110px;
+  width: auto;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  padding: 0 20px 0 20px;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 0.6px;
+  border: 1px solid black;
+
+  &:hover {
+    background-color: rgb(69, 69, 69);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgb(126, 126, 126);
+    border: 1px solid rgb(126, 126, 126);
+  }
+}
+
+.altColor {
+  background-color: rgb(186, 113, 113);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(194, 194, 194);
+
+  &:hover {
+    background-color: rgb(182, 128, 128);
+    color: white;
+  }
+}

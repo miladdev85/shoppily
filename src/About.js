@@ -7,12 +7,6 @@ const Content = posed.div({
   open: { height: "auto" }
 });
 
-const titleStyle = {
-  cursor: "pointer",
-  padding: "5px 8px",
-  borderBottom: "1px solid #9f0092"
-};
-
 class About extends React.Component {
   state = { open: false };
 
@@ -20,20 +14,18 @@ class About extends React.Component {
     const { open } = this.state;
     return (
       <>
-        <h1 style={{ textAlign: "center", marginBottom: "30px" }}>
-          Frågor och svar om detta projekt
-        </h1>
+        <h1 className="about__title">Frågor och svar om detta projekt</h1>
         {data.map(({ question, answer }, i) => (
           <Fragment key={i}>
-            <h2 style={titleStyle} onClick={() => this.setState({ open: open === i ? false : i })}>
+            <h2
+              className="about__question"
+              onClick={() => this.setState({ open: open === i ? false : i })}
+            >
               {open === i ? "- " : "+ "}
               {question}
             </h2>
-            <Content
-              style={{ overflow: "hidden", fontSize: "2rem" }}
-              pose={open === i ? "open" : "closed"}
-            >
-              <div style={{ padding: "10px 0px 10px 20px" }}>{answer}</div>
+            <Content className="about__content" pose={open === i ? "open" : "closed"}>
+              <div className="about__answer">{answer}</div>
             </Content>
           </Fragment>
         ))}

@@ -1,13 +1,18 @@
 export default [
   {
+    question: "Varför är sidan seg vid första inläsning?",
+    answer:
+      'Back-enden och CMS verktyget är hostad på Heroku. På grund av att jag använder deras gratis version, kan den initiala laddningen av sidan ta en stund eftersom servern är i "sleep mode" och svarar inte på anrop på direkten.'
+  },
+  {
     question: "Berätta om detta projekt",
     answer:
-      "Det här är mitt andra projekt. Efter Movify projektet ville jag lära mig mer om CSS och SCSS. Här har jag använt SCSS samt Styled Components för designen. CSS har varit något jag haft lite svårt för tidigare men i och med detta projekt känner jag mig mycket tryggare med den delen. Sidan är mycket enklare än Movify men CSS delen är mer komplicerat och har åstadkommits utan CSS Framework."
+      "Det här är mitt andra projekt. Efter Movify projektet ville jag lära mig mer om CSS och SCSS. Jag började med SCSS i utbildningssyfte för att sedan gå över till Styled Components för att lära mig det. CSS har varit något jag haft lite svårt för tidigare men i och med detta projekt känner jag mig mycket tryggare med den delen. Sidan är mycket enklare än Movify men CSS delen är mer komplicerat och har åstadkommits utan CSS Framework förutom enstaka tillfällen där jag använt mig av Bootstrap Grid för mobila vyer. Alla SCSS filer finns kvar på GitHub."
   },
   {
     question: "Vad har varit den stora utmaningen?",
     answer:
-      "Definitivt CSS delen. Positioneringen samt att få sidan att bli responsiv och fungera bra på mobilen. Sedan har kombinationen av ett Headless CMS + MongoDB + Heroku + Netlify haft sina egna utmaningar, men det har varit intressant och roligt när jag väl lyckats."
+      "Eftersom detta är mitt första projekt utan något CSS Framework har CSS delen varit den stora utmaningen. Positioneringen samt att få sidan att bli responsiv och fungera bra på mobilen. Sedan har kombinationen av ett Headless CMS + MongoDB + Heroku + Netlify haft sina egna utmaningar, men det har varit intressant och roligt när jag väl lyckats."
   },
   {
     question: "Hur känner du inför React då?",
@@ -32,7 +37,7 @@ export default [
   {
     question: "Hur har du hanterat utmaningar som uppstått?",
     answer:
-      "Genom Google och YouTube. Jag är en visuell person och lär mig väldigt snabbt när jag t.ex. tittar på ett kort YouTube klipp om ämnet ifråga."
+      "Genom Google, YouTube och att läsa dokumentation. Jag är en visuell person och lär mig väldigt snabbt när jag t.ex. tittar på ett kort YouTube klipp om ämnet ifråga."
   },
   {
     question: '"Mer info" och "Lägg till" knapparna gör ingenting?',
@@ -40,13 +45,8 @@ export default [
       "Jag kände inte att dessa knappar skulle medföra något ytterligare i detta projekt och lämnade de för tillfället för att ta mig an nästa projekt - bygga self contained komponenter. I framtiden kanske dessa knappar leder till en modal eller ny sida för mer information om produkten samt en kundkorg. Men som sagt, det är endast nya sidor och skulle nog inte visa något mer i CV syfte eller imponera på någon."
   },
   {
-    question: "Hur lång tid har detta projekt tagit?",
-    answer:
-      "Cirka 3 dagar. Det som tog tid var främst CSS delen. Det har emellanåt varit väldigt frustrerande men otroligt lärorikt."
-  },
-  {
     question: "Övrigt som du själv vill tillägga?",
     answer:
-      "Ja, faktiskt. Jag anser att jag haft några milstolpar under dessa 6 månader som jag studerat JavaScript och front-end utveckling. Det första var självklart att jag lärde mig JavaScript. Sedan kom React och JSX in i bilden - oj, vad jag älskade JSX när jag såg det. Men det allra viktigaste har kanske varit Bootstrap! Jag kunde äntligen positionera allt hur jag än ville. Jag var faktiskt nära på att lägga av innan jag lärde mig Bootstrap... Vilken tur att jag hittade Bootstrap ;) Men jag ville inte vara begränsad av Bootstrap och valde därför att lära mig CSS och SCSS. Vilket självförtroende att kunna lösa layout och design utan något framework, wow! "
+      "Ja, faktiskt. Jag anser att jag haft några milstolpar under dessa 6 månader som jag studerat JavaScript och front-end utveckling. Det första var självklart att jag lärde mig JavaScript. Sedan kom React och JSX in i bilden - oj, vad jag älskade JSX när jag såg det. Men det allra viktigaste har kanske varit Bootstrap! Jag kunde äntligen positionera allt hur jag än ville. Jag var faktiskt nära på att lägga av innan jag lärde mig Bootstrap... Vilken tur att jag hittade Bootstrap ;) Men jag ville inte vara begränsad av Bootstrap och valde därför att lära mig CSS och SCSS. Vilket självförtroende att kunna lösa layout och design utan något framework, wow! Detta har medfört att jag kunnat skapa snygga sidor och fördjupat mig ännu mer inom React."
   }
 ];

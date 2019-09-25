@@ -1,0 +1,27 @@
+.breadcrumb__container {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.breadcrumb__list {
+  display: inline-block;
+  list-style: none;
+  padding-right: 2rem;
+}
+
+.breadcrumb__title {
+  --mainColor: #535393;
+  background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+  font-size: 1.8rem;
+  padding: 0px 8px;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  transition: background-size 0.2s;
+  &:hover {
+    background-size: 1px 26px;
+    color: rgb(231, 231, 231);
+  }
+}

@@ -11,8 +11,13 @@ const Header = () => {
           </Link>
         </li>
         <li className="nav__item">
-          <Link to="/projektet" className="nav__link" href="_">
+          <Link to="/projektet" className="nav__link">
             Om detta projekt
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link to="/loggain" className="nav__link">
+            Logga in
           </Link>
         </li>
       </ul>
