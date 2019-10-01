@@ -25,6 +25,11 @@ export default [
       'Nu ska jag bygga "self contained" komponenter som kan användas i andra projekt. Så som formulär och knappar. Kanske kan jag till och med göra denna FAQ sektion till en "self contained" komponent så att jag kan återanvända den i andra projekt.'
   },
   {
+    question: "Något speciellt du vill skryta om i detta projekt?",
+    answer:
+      'Ta en titt på "Logga in" sidan. Jag är ganska nöjd över mina formulär. Tycker de både ser bra ut och har bra funktionalitet samt går att återanvända.'
+  },
+  {
     question: "Berätta om plattformen för denna sida",
     answer:
       "CMS är av typen Headless CMS och heter Strapi. Jag tyckte det lät intressant att ha ett eget CMS verktyg för att hantera produkterna, så jag satte mig in i dokumentationen för Strapi. Detta visar att jag kan läsa dokumentation och ge mig ut på okänd mark ;) Databasen består av MongoDB och back-enden är hostad på Heroku. På grund av att jag använder deras gratis version, kan den initiala laddningen av sidan ta en stund. Front-enden är deployad via Netlify."
