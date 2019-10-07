@@ -7,7 +7,7 @@ export default [
   {
     question: "Berätta om detta projekt",
     answer:
-      "Det här är mitt andra projekt. Efter Movify projektet ville jag lära mig mer om CSS och SCSS. Jag började med SCSS i utbildningssyfte för att sedan gå över till Styled Components för att lära mig det. CSS har varit något jag haft lite svårt för tidigare men i och med detta projekt känner jag mig mycket tryggare med den delen. Sidan är mycket enklare än Movify men CSS delen är mer komplicerat och har åstadkommits utan CSS Framework förutom enstaka tillfällen där jag använt mig av Bootstrap Grid för mobila vyer. Alla SCSS filer finns kvar på GitHub."
+      "Det här är mitt andra projekt. Efter Movify projektet ville jag lära mig mer om CSS och SCSS. CSS har varit något jag haft lite svårt för tidigare men i och med detta projekt känner jag mig mycket tryggare med den delen. Sidan är mycket enklare än Movify men CSS delen är mer komplicerat och har åstadkommits utan CSS Framework förutom enstaka tillfällen där jag använt mig av Bootstrap Grid för mobila vyer. Anledningen till att CSS varit svårt att greppa för mig är helt enkelt för att jag inte lagt ner tid på det förrän nu. Tidigare har JavaScript och React varit i huvudfokus."
   },
   {
     question: "Vad har varit den stora utmaningen?",
