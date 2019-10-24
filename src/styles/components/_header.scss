@@ -21,3 +21,9 @@
 .nav__item {
   padding: 1.5rem;
 }
+
+@media screen and (max-width: 320px) {
+  .nav__container {
+    font-size: 2.1rem;
+  }
+}

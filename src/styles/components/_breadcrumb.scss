@@ -25,3 +25,10 @@
     color: rgb(231, 231, 231);
   }
 }
+
+@media screen and (max-width: 320px) {
+  .breadcrumb__title {
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+  }
+}
