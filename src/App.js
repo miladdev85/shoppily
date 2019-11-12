@@ -15,6 +15,7 @@ import ResetPassword from "./ResetPassword";
 function App() {
   const [sections, setSections] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [firstLoad, setFirstLoad] = useState(true);
 
   useEffect(() => {
     let didCancel = false;
@@ -22,6 +23,7 @@ function App() {
       setIsLoading(true);
       const response = await axios.get(network.sections);
       setSections(response.data);
+      setFirstLoad(false);
       setIsLoading(false);
     };
     if (didCancel === false) {
@@ -33,11 +35,18 @@ function App() {
   return (
     <main style={{ minHeight: "100vh" }} className="contain">
       <Header />
-
       <Route
         exact
         path="/"
-        render={() => <>{isLoading ? <Loading /> : <HomePage sections={sections} />}</>}
+        render={() => (
+          <>
+            {isLoading ? (
+              <Loading message={firstLoad ? "Please wait for Heroku server to wake up" : ""} />
+            ) : (
+              <HomePage sections={sections} />
+            )}
+          </>
+        )}
       />
 
       <Route
