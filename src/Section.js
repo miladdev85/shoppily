@@ -29,7 +29,7 @@ const Section = ({ match }) => {
       ) : (
         <div className="row">
           {products.map(product => (
-            <SectionItem key={product.id} {...product} />
+            <SectionItem key={product.id} item={product} />
           ))}
         </div>
       )}
