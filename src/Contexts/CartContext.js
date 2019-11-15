@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 
 export const CartContext = createContext();
 
@@ -6,7 +6,19 @@ export const CartProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
 
   const addProduct = item => {
-    setProducts([...products, item]);
+    let updatedProducts = [];
+
+    if (products.find(product => product.id === item.id)) {
+      updatedProducts = products.map(product => {
+        if (product.id === item.id) {
+          return { ...product, amount: (product.amount += 1) };
+        }
+        return product;
+      });
+    } else {
+      updatedProducts = [...products, { ...item, amount: 1 }];
+    }
+    setProducts(updatedProducts);
   };
 
   const removeProduct = id => {
@@ -16,8 +28,6 @@ export const CartProvider = ({ children }) => {
   const resetCart = () => {
     setProducts([]);
   };
-
-  useEffect(() => console.log(products), [products]);
 
   return (
     <CartContext.Provider value={{ products, addProduct, removeProduct, resetCart }}>

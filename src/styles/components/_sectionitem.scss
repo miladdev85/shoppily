@@ -39,6 +39,10 @@
     background-color: rgb(170, 170, 170);
     color: white;
   }
+  &:active {
+    background-color: rgb(110, 110, 110);
+    color: white;
+  }
   @media screen and (max-width: 900px) {
     font-size: 1.3rem;
     padding: 4px 6px 4px 6px;

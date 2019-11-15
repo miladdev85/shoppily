@@ -5,6 +5,8 @@ import bag from "./bag.png";
 
 const Header = () => {
   const { products } = useContext(CartContext);
+  const cartItems = products.reduce((acc, current) => acc + current.amount, 0);
+
   return (
     <nav>
       <ul className="nav__container">
@@ -25,9 +27,9 @@ const Header = () => {
         </li>
         <li className="nav__item">
           <Link to="/kundkorg" className="nav__link">
-            <div className="cart">
-              <img src={bag} alt="" className="cart-image" />
-              <span className="cart-nr">{products.length}</span>
+            <div className={` cart`}>
+              <img src={bag} alt="" className={`${products.length > 0 && "jello"} cart-image`} />
+              <span className={` ${cartItems && "show"} cart-nr`}>{cartItems}</span>
             </div>
           </Link>
         </li>
