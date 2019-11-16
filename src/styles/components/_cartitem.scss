@@ -7,7 +7,7 @@
 
 .cart__product-name {
   flex-grow: 2;
-  flex-basis: 1rem;
+  flex-basis: 0;
 }
 
 .cart__product-amount {
@@ -18,14 +18,14 @@
 }
 
 .amount-minus {
-  margin: 0 0.6rem 0 0;
-  font-size: 0.6em;
+  padding-right: 0.8rem;
   cursor: pointer;
+  font-size: 0.8em;
 }
 
 .amount-plus {
-  margin: 0 0 0 0.6rem;
-  font-size: 0.6em;
+  padding-left: 0.8rem;
+  font-size: 0.8em;
   cursor: pointer;
 }
 
@@ -37,4 +37,18 @@
 .cart__product-total {
   flex-grow: 1;
   flex-basis: 0;
+}
+
+@media screen and (max-width: 420px) {
+  .cart__product {
+  }
+
+  .amount-minus {
+    padding-right: 0.4rem;
+    font-size: 0.8em;
+  }
+  .amount-plus {
+    padding-left: 0.4rem;
+    font-size: 0.8em;
+  }
 }

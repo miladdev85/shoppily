@@ -19,7 +19,7 @@ const SectionItem = ({ item }) => {
       <div className="image__container">
         <div style={{ backgroundImage: `url(${item.imageUrl})` }} className="product__image" />
         <div className="product__overlay">
-          <h3 onClick={() => handleAdd(item)} className="product__overlay__button">
+          <h3 onClick={() => !loading && handleAdd(item)} className="product__overlay__button">
             {loading ? (
               <>
                 <Spinner
