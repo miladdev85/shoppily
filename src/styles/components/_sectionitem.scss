@@ -83,6 +83,18 @@
     width: 100%;
     padding: 1.2rem;
   }
+
+  .image__container {
+    &:hover {
+      .product__image {
+        filter: brightness(100%);
+      }
+      .product__overlay {
+        opacity: 1;
+      }
+    }
+  }
+
   .product__name {
     width: 70%;
   }
