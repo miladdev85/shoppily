@@ -64,13 +64,21 @@
 
 @media screen and (max-width: 420px) {
   .nav__container {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .nav__item {
     padding: 1rem 0rem 1rem 1rem;
   }
   .nav__item-logo {
     padding: 1rem 0rem;
+  }
+  .cart-image {
+    width: 40px;
+    height: 40px;
+  }
+  .cart-nr {
+    font-size: 1.2rem;
+    padding: 0rem 0.5rem;
   }
 }
 
