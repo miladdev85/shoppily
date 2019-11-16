@@ -32,6 +32,7 @@
 .product__overlay__button {
   padding: 6px 8px 6px 8px;
   text-align: center;
+  margin-bottom: 1rem;
   background-color: white;
   color: grey;
   cursor: pointer;
@@ -92,6 +93,17 @@
       .product__overlay {
         opacity: 1;
       }
+    }
+  }
+
+  .product__overlay__button {
+    &:hover {
+      background-color: white;
+      color: grey;
+    }
+    &:active {
+      background-color: rgb(110, 110, 110);
+      color: white;
     }
   }
 
