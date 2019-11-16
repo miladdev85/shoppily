@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "./Contexts/CartContext";
 import { Link } from "react-router-dom";
-import bag from "./bag.png";
+import bag from "./bag2.png";
 
 const Header = () => {
   const { products } = useContext(CartContext);
@@ -28,7 +28,11 @@ const Header = () => {
         <li className="nav__item">
           <Link to="/kundkorg" className="nav__link">
             <div className={` cart`}>
-              <img src={bag} alt="" className={`${products.length > 0 && "jello"} cart-image`} />
+              <img
+                src={bag}
+                alt="shopping cart"
+                className={`${products.length > 0 && "jello"} cart-image`}
+              />
               <span className={` ${cartItems && "show"} cart-nr`}>{cartItems}</span>
             </div>
           </Link>
