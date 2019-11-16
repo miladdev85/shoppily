@@ -29,3 +29,12 @@
   flex-grow: 1;
   flex-basis: 0;
 }
+
+@media screen and (max-width: 420px) {
+  .cart__head-product {
+    flex-grow: 3;
+  }
+  .cart__head-amount {
+    flex-grow: 2;
+  }
+}

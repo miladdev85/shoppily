@@ -40,15 +40,18 @@
 }
 
 @media screen and (max-width: 420px) {
-  .cart__product {
-  }
-
   .amount-minus {
-    padding-right: 0.4rem;
-    font-size: 0.8em;
+    padding-right: 0.8rem;
+    font-size: 1em;
   }
   .amount-plus {
-    padding-left: 0.4rem;
-    font-size: 0.8em;
+    padding-left: 0.8rem;
+    font-size: 1em;
+  }
+  .cart__product-name {
+    flex-grow: 3;
+  }
+  .cart__product-amount {
+    flex-grow: 2;
   }
 }

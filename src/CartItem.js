@@ -7,9 +7,9 @@ const CartItem = ({ product, handleAdd, handleSubtract }) => {
     <div className="cart__product">
       <p className="cart__product-name">{product.name}</p>
       <div className="cart__product-amount">
-        <i className="fas fa-minus amount-minus" onClick={() => handleSubtract(product)}></i>
+        <i className="fas fa-chevron-down amount-minus" onClick={() => handleSubtract(product)}></i>
         <p>{product.amount}</p>
-        <i className="fas fa-plus amount-plus" onClick={() => handleAdd(product)}></i>
+        <i className="fas fa-chevron-up amount-plus" onClick={() => handleAdd(product)}></i>
       </div>
       <p className="cart__product-price">{product.price.toLocaleString()} kr</p>
       <p className="cart__product-total">{totalPrice.toLocaleString()} kr</p>
