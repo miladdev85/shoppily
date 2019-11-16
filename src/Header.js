@@ -27,7 +27,7 @@ const Header = () => {
         </li>
         <li className="nav__item">
           <Link to="/kundkorg" className="nav__link">
-            <div className={` cart`}>
+            <div className="cart">
               <img
                 src={bag}
                 alt="shopping cart"

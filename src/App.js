@@ -38,7 +38,6 @@ function App() {
     <CartProvider>
       <main style={{ minHeight: "100vh" }} className="contain">
         <Header />
-
         <Route
           exact
           path="/"
