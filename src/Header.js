@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "./Contexts/CartContext";
 import { Link } from "react-router-dom";
-import bag from "./bag2.png";
+import bag from "./bag.png";
 
 const Header = () => {
   const { products } = useContext(CartContext);
