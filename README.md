@@ -1,5 +1,7 @@
-### Purpose:
-Become proficient with CSS and SCSS.
+### About this project
+A webshop built in React.
+
+Keywords: React, Context, Router, Async / Await, Headless CMS (Strapi), SCSS & CSS, Responsive design, ES6+
 
 ### Platform:
 Using Strapi as Headless CMS for all products. Configured Strapi with MongoDB.
