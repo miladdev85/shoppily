@@ -38,10 +38,5 @@ export default [
     question: "Hur har du hanterat utmaningar som uppstått?",
     answer:
       "Genom Google, YouTube och att läsa dokumentation. Jag är en visuell person och lär mig väldigt snabbt när jag t.ex. tittar på ett kort YouTube klipp om ämnet ifråga."
-  },
-  {
-    question: '"Mer info" knappen gör ingenting?',
-    answer:
-      "Jag kände inte att det skulle medföra något ytterligare i detta projekt och lämnade den för tillfället för att ta mig an nästa projekt. I framtiden kanske knappen leder till en modal eller ny sida för mer information om produkten."
   }
 ];

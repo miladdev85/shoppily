@@ -36,7 +36,7 @@ const SectionItem = ({ item }) => {
                 "Lägg till"
               )}
             </h3>
-            <h3 className="product__overlay__button">Mer info</h3>
+            {/* <h3 className="product__overlay__button">Mer info</h3> */}
           </div>
         </div>
         <div className="product__info">
