@@ -7,7 +7,7 @@ export default [
   {
     question: "Berätta om detta projekt",
     answer:
-      "Efter Movify projektet ville jag lära fördjupa mig mer inom CSS och SCSS. CSS har varit något som hamnat lite i skymundan under min utvecklingsresa men i och med detta projekt känner jag mig mycket tryggare med det. Sidan är något enklare än Movify men CSS delen är mer komplicerat och har åstadkommits utan CSS Framework förutom enstaka tillfällen där jag använt mig av Bootstrap Grid för mobila vyer."
+      "Efter Movify projektet ville jag fördjupa mig mer inom CSS och SCSS. CSS har varit något som hamnat lite i skymundan under min utvecklingsresa men i och med detta projekt känner jag mig mycket tryggare med det. Sidan är något enklare än Movify men CSS delen är mer komplicerat och har åstadkommits utan CSS Framework förutom enstaka tillfällen där jag använt mig av Bootstrap Grid för mobila vyer."
   },
   {
     question: "Vad har varit den stora utmaningen?",
