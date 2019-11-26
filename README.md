@@ -1,6 +1,6 @@
 ### About this project
 A webshop built in React.<br/>
-Keywords: React, Context, Router, Async / Await, Headless CMS (Strapi), SCSS & CSS, Responsive design, ES6+
+**Keywords:** React, Context, Router, Async / Await, Headless CMS (Strapi), SCSS & CSS, Responsive design, ES6+
 
 ----------------------------------------------------------------------
 
