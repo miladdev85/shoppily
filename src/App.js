@@ -36,7 +36,7 @@ function App() {
 
   return (
     <CartProvider>
-      <main style={{ minHeight: "100vh" }} className="contain">
+      <main className="contain">
         <Header />
         <Route
           exact

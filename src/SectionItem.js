@@ -15,8 +15,8 @@ const SectionItem = ({ item }) => {
   };
 
   return (
-    <>
-      <div style={{ marginBottom: 20 }} className="col-6 col-md-3">
+    <div className="product__container col-6 col-md-3">
+      <div className="product">
         <div className="image__container">
           <div style={{ backgroundImage: `url(${item.imageUrl})` }} className="product__image" />
           <div className="product__overlay">
@@ -36,7 +36,6 @@ const SectionItem = ({ item }) => {
                 "Lägg till"
               )}
             </h3>
-            {/* <h3 className="product__overlay__button">Mer info</h3> */}
           </div>
         </div>
         <div className="product__info">
@@ -44,7 +43,7 @@ const SectionItem = ({ item }) => {
           <p className="product__price">{item.price} kr</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,11 @@
+.product__container {
+  margin-bottom: 2.5rem;
+}
+
+.product {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.149);
+}
+
 .image__container {
   position: relative;
   overflow: hidden;
@@ -34,6 +42,7 @@
   text-align: center;
   margin-bottom: 1rem;
   background-color: white;
+  font-size: 2.2rem;
   color: grey;
   cursor: pointer;
   &:hover {
@@ -53,10 +62,10 @@
 .product__info {
   display: flex;
   width: 100%;
-  cursor: pointer;
   font-weight: bold;
   color: #717171;
   font-size: 1.7rem;
+  padding: 1rem;
   justify-content: space-between;
 }
 
@@ -113,5 +122,11 @@
 
   .product__name {
     width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .product__container {
+    margin-bottom: 3.5rem;
   }
 }
