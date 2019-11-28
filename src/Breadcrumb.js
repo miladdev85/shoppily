@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Breadcrumb = ({ sections }) => {
   return (
     <div>
-      <ul className="breadcrumb__container">
+      <ul className="breadcrumb">
         {sections.map(section => {
           return (
             <li className="breadcrumb__list" key={section.id}>

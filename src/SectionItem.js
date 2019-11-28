@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "./Contexts/CartContext";
 import { Link, withRouter } from "react-router-dom";
-import Spinner from "react-bootstrap/Spinner";
 
 const SectionItem = ({ location, item }) => {
   const [loading, setLoading] = useState(false);
   const { addProduct } = useContext(CartContext);
 
+  // Simulating async function for adding items to cart so we can have loading state
   const handleAdd = item => {
     setLoading(true);
     setTimeout(() => {
@@ -23,9 +23,9 @@ const SectionItem = ({ location, item }) => {
   };
 
   return (
-    <div className="product__container col-6 col-md-3">
-      <div className="product">
-        <div className="image__container">
+    <div className="productwrapper col-6 col-md-3">
+      <div className="shadow">
+        <div className="imagewrapper">
           <div style={{ backgroundImage: `url(${item.imageUrl})` }} className="product__image" />
           <div className="product__overlay">
             <button onClick={() => !loading && handleAdd(item)} className="product__overlay-button">
@@ -43,10 +43,17 @@ const SectionItem = ({ location, item }) => {
             </button>
           </div>
         </div>
-        <div className="product__info">
-          <p className="product__name">{item.name}</p>
-          <p className="product__price">{item.price} kr</p>
-        </div>
+        <Link
+          className="product__overlay-link"
+          to={{
+            pathname: `${location.pathname}/${convertItemName(item.name)}`
+          }}
+        >
+          <div className="product__info">
+            <p className="product__name">{item.name}</p>
+            <p className="product__price">{item.price} kr</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

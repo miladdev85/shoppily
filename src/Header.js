@@ -9,8 +9,8 @@ const Header = () => {
 
   return (
     <nav>
-      <ul className="nav__container">
-        <li className="nav__item-logo flex__left">
+      <ul className="nav">
+        <li className="nav__item-logo flex-left">
           <Link to="/">
             <i className="far fa-gem nav__link"></i>
           </Link>
@@ -31,9 +31,9 @@ const Header = () => {
               <img
                 src={bag}
                 alt="shopping cart"
-                className={`${products.length > 0 && "jello"} cart-image`}
+                className={`${products.length > 0 && "jello"} cart__image`}
               />
-              <span className={` ${cartItems && "show"} cart-nr`}>{cartItems}</span>
+              <span className={` ${cartItems && "show"} cart__nr`}>{cartItems}</span>
             </div>
           </Link>
         </li>

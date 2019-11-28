@@ -1,4 +1,5 @@
-.home__item {
+.home {
+  $root: &;
   padding: 0;
   min-width: 30%;
   height: 240px;
@@ -9,41 +10,38 @@
   margin: 0 10px 25px 10px;
   overflow: hidden;
 
-  &:hover {
-    cursor: pointer;
+  &__backgroundimage {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 
-    .home__background-image {
+  &__content {
+    color: grey;
+    position: absolute;
+    background-color: white;
+    padding: 0.4rem 1.5rem;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    #{$root}__backgroundimage {
       transform: scale(1.2);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
-
-    .home__content {
+    #{$root}__content {
       opacity: 0.9;
     }
   }
 }
 
 .large {
-  height: 380px;
+  height: 240px;
 }
 
-.home__background-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.home__content {
-  color: grey;
-  position: absolute;
-  background-color: white;
-  padding: 0.4rem 1.5rem;
-  opacity: 0.7;
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 992px) {
   .large {
-    height: 240px;
+    height: 380px;
   }
 }

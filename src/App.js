@@ -24,6 +24,11 @@ function App() {
     const getSections = async () => {
       setIsLoading(true);
       const response = await axios.get(network.sections);
+
+      //Sort array before putting it in state because sort will mutate array if we do it later - more easy and practical to do it now.
+      //Sorting the array by poster size so that we have correct design on homepage.
+      response.data.sort((a, b) => !b.size - !a.size);
+
       setSections(response.data);
       setFirstLoad(false);
       setIsLoading(false);
