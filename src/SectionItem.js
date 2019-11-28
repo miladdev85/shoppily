@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "./Contexts/CartContext";
+import { Link, withRouter } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
 
-const SectionItem = ({ item }) => {
+const SectionItem = ({ location, item }) => {
   const [loading, setLoading] = useState(false);
   const { addProduct } = useContext(CartContext);
 
@@ -14,28 +15,32 @@ const SectionItem = ({ item }) => {
     }, 1000);
   };
 
+  const convertItemName = str => {
+    return str
+      .split(" ")
+      .join("-")
+      .toLowerCase();
+  };
+
   return (
     <div className="product__container col-6 col-md-3">
       <div className="product">
         <div className="image__container">
           <div style={{ backgroundImage: `url(${item.imageUrl})` }} className="product__image" />
           <div className="product__overlay">
-            <h3 onClick={() => !loading && handleAdd(item)} className="product__overlay__button">
-              {loading ? (
-                <>
-                  <Spinner
-                    as="span"
-                    animation="grow"
-                    size="lg"
-                    role="status"
-                    aria-hidden="true"
-                    className="product-loader"
-                  />
-                </>
-              ) : (
-                "Lägg till"
-              )}
-            </h3>
+            <button onClick={() => !loading && handleAdd(item)} className="product__overlay-button">
+              {loading ? <p>Vänta...</p> : "Lägg till"}
+            </button>
+            <button className="product__overlay-button">
+              <Link
+                className="product__overlay-link"
+                to={{
+                  pathname: `${location.pathname}/${convertItemName(item.name)}`
+                }}
+              >
+                Mer info
+              </Link>
+            </button>
           </div>
         </div>
         <div className="product__info">
@@ -47,4 +52,4 @@ const SectionItem = ({ item }) => {
   );
 };
 
-export default SectionItem;
+export default withRouter(SectionItem);

@@ -35,28 +35,41 @@
   -ms-transform: translate(-50%, -50%);
   top: 70%;
   left: 50%;
-}
 
-.product__overlay__button {
-  padding: 6px 8px 6px 8px;
-  text-align: center;
-  margin-bottom: 1rem;
-  background-color: white;
-  font-size: 2.2rem;
-  color: grey;
-  cursor: pointer;
-  &:hover {
-    background-color: rgb(170, 170, 170);
-    color: white;
+  &-button {
+    line-height: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: white;
+    font-size: 1.6rem;
+    border: none;
+    color: grey;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(170, 170, 170);
+      color: white;
+    }
+    &:active {
+      background-color: rgb(110, 110, 110);
+      color: white;
+    }
   }
-  &:active {
-    background-color: rgb(110, 110, 110);
-    color: white;
-  }
-}
 
-.product-loader {
-  margin-bottom: 0.2rem;
+  &-link {
+    text-decoration: none;
+    color: grey;
+
+    &:hover {
+      background-color: rgb(170, 170, 170);
+      color: white;
+    }
+    &:active {
+      background-color: rgb(110, 110, 110);
+      color: white;
+    }
+  }
 }
 
 .product__info {
@@ -88,10 +101,24 @@
     background-color: rgba(39, 39, 39, 0.395);
     top: 90%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     width: 100%;
-    padding: 1.2rem;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &-button {
+      display: inline-block;
+      font-size: 1.2rem;
+      margin: 0 3px;
+      line-height: 1.8;
+      &:hover {
+        background-color: white;
+        color: grey;
+      }
+      &:active {
+        background-color: white;
+        color: grey;
+      }
+    }
   }
 
   .image__container {
@@ -105,23 +132,20 @@
     }
   }
 
-  .product__overlay__button {
-    font-size: 1.6rem;
-    padding: 4px 6px 4px 6px;
-    width: 6.2rem;
-    height: 2.8rem;
-    &:hover {
-      background-color: white;
-      color: grey;
-    }
-    &:active {
-      background-color: white;
-      color: grey;
-    }
-  }
-
   .product__name {
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .product__overlay {
+    padding: 0.8rem;
+
+    &-button {
+      font-size: 1.3rem;
+      padding: 2px;
+      margin: 0 2px;
+    }
   }
 }
 

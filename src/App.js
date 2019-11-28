@@ -62,6 +62,15 @@ function App() {
             </>
           )}
         />
+        <Route
+          exact
+          path="/avdelning/:id/:product"
+          render={props => (
+            <>
+              <h1>HELLO</h1>
+            </>
+          )}
+        />
         <Route exact path="/kundkorg" component={Cart} />
         <Route exact path="/projektet" component={About} />
         <Route exact path="/loggain" component={SignInPage} />
