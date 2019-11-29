@@ -1,5 +1,4 @@
 [[redirects]]
-commands= "npm build"
   from = "/*"
   to = "/index.html"
   status = 200
