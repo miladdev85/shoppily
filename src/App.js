@@ -13,6 +13,7 @@ import axios from "axios";
 import { Route } from "react-router-dom";
 import "./styles/styles.scss";
 import ResetPassword from "./ResetPassword";
+import Details from "./Details";
 
 function App() {
   const [sections, setSections] = useState([]);
@@ -72,7 +73,8 @@ function App() {
           path="/avdelning/:id/:product"
           render={props => (
             <>
-              <h1>HELLO</h1>
+              <Breadcrumb sections={sections} {...props} />
+              <Details />
             </>
           )}
         />
