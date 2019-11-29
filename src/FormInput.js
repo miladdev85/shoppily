@@ -2,7 +2,7 @@ import React from "react";
 
 const FormInput = ({ children, ...otherProps }) => {
   return (
-    <div className="form__group">
+    <div className="form">
       <input {...otherProps} className="form__input"></input>
       {children}
     </div>

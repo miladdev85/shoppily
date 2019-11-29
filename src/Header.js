@@ -5,6 +5,8 @@ import bag from "./bag.png";
 
 const Header = () => {
   const { products } = useContext(CartContext);
+
+  // Amount property is added to item object. Here we loop through the array of objects and check amount value. Add the amount together and show in cart.
   const cartItems = products.reduce((acc, current) => acc + current.amount, 0);
 
   return (

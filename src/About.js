@@ -13,7 +13,7 @@ class About extends React.Component {
   render() {
     const { open } = this.state;
     return (
-      <>
+      <div className="about">
         <h1 className="about__title">Frågor och svar om detta projekt</h1>
         {data.map(({ question, answer }, i) => (
           <Fragment key={i}>
@@ -29,7 +29,7 @@ class About extends React.Component {
             </Content>
           </Fragment>
         ))}
-      </>
+      </div>
     );
   }
 }

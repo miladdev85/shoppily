@@ -20,6 +20,7 @@ export class SignIn extends Component {
     formValid: false
   };
 
+  // Set state with input values and if there are any errors. Error checking will be done in the validateForm function which the ui and other functionalities depend on.
   onChange = e => {
     e.preventDefault();
     const { name, value } = e.target;
@@ -51,6 +52,7 @@ export class SignIn extends Component {
     );
   };
 
+  // Form validation is done here. Set state weither form is valid or not. We validate all fields before setting formValid - in case one field is left empty etc.
   validateForm = () => {
     let inputsValid = true;
     let noErrors = true;
@@ -59,7 +61,7 @@ export class SignIn extends Component {
     Object.values(this.state.errors).forEach(val => val.length > 0 && (noErrors = false));
 
     if (inputsValid && noErrors) {
-      this.setState({ formValid: true }, () => console.log(this.state));
+      this.setState({ formValid: true });
     } else {
       this.setState({ formValid: false });
     }
@@ -67,7 +69,6 @@ export class SignIn extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
   };
 
   render() {

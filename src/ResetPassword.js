@@ -20,7 +20,6 @@ const ResetPassword = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-    console.log(email);
   };
 
   return (

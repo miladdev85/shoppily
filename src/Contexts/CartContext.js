@@ -28,7 +28,6 @@ export const CartProvider = ({ children }) => {
     }
 
     const sortedProducts = sortArray(updatedProducts, "name");
-
     setProducts(sortedProducts);
   };
 
