@@ -13,7 +13,7 @@ import axios from "axios";
 import { Route } from "react-router-dom";
 import "./styles/styles.scss";
 import ResetPassword from "./ResetPassword";
-import Details from "./Details";
+import ProductPage from "./ProductPage";
 
 function App() {
   const [sections, setSections] = useState([]);
@@ -68,16 +68,7 @@ function App() {
             </>
           )}
         />
-        <Route
-          exact
-          path="/avdelning/:id/:product"
-          render={props => (
-            <>
-              <Breadcrumb sections={sections} {...props} />
-              <Details />
-            </>
-          )}
-        />
+        <Route exact path="/avdelning/:id/:product" component={ProductPage} />
         <Route exact path="/kundkorg" component={Cart} />
         <Route exact path="/projektet" component={About} />
         <Route exact path="/loggain" component={SignInPage} />

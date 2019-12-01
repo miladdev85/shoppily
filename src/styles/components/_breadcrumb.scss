@@ -1,11 +1,12 @@
 .breadcrumb {
   padding: 0px;
   display: flex;
+  justify-content: center;
 
   &__list {
     display: inline-block;
     list-style: none;
-    padding-right: 2rem;
+    padding-right: 1rem;
   }
 
   &__title {
@@ -25,6 +26,15 @@
   .breadcrumb__title:hover {
     background-size: 1px 26px;
     color: rgb(231, 231, 231);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .breadcrumb {
+    justify-content: flex-start;
+    &__list {
+      // padding-right: 0;
+    }
   }
 }
 

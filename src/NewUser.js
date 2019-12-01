@@ -56,8 +56,9 @@ export class SignIn extends Component {
   validateForm = () => {
     let inputsValid = true;
     let noErrors = true;
-
+    // Check if all inputs have a length higher than 1
     Object.values(this.state.inputs).forEach(val => val.length < 1 && (inputsValid = false));
+    // Check if all erorrs are empty
     Object.values(this.state.errors).forEach(val => val.length > 0 && (noErrors = false));
 
     if (inputsValid && noErrors) {

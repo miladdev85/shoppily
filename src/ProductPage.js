@@ -3,7 +3,7 @@ import Loading from "./Loading";
 import axios from "axios";
 import { products } from "./Utils/Network";
 
-const Details = ({ match }) => {
+const ProductPage = ({ match }) => {
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
@@ -25,16 +25,10 @@ const Details = ({ match }) => {
   }, [match.params.product]);
 
   return (
-    <>
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <div>
-          <h1>Coming soon</h1>
-        </div>
-      )}
-    </>
+    <div>
+      <h1>Product Page Coming Soon</h1>
+    </div>
   );
 };
 
-export default Details;
+export default ProductPage;
