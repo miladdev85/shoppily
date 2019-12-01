@@ -9,7 +9,7 @@ const SectionItem = ({ location, item, addItem, selectedProduct, disableButtons 
       .join("-")
       .toLowerCase();
   };
-  // console.log(item);
+
   return (
     <div className="productwrapper col-6 col-md-3">
       <div className="shadow">

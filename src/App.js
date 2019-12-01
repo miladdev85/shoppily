@@ -44,6 +44,7 @@ function App() {
     <CartProvider>
       <main className="contain">
         <Header />
+        <Breadcrumb sections={sections} />
         <Route
           exact
           path="/"
@@ -58,16 +59,7 @@ function App() {
           )}
         />
 
-        <Route
-          exact
-          path="/avdelning/:id"
-          render={props => (
-            <>
-              <Breadcrumb sections={sections} {...props} />
-              <Section {...props} />
-            </>
-          )}
-        />
+        <Route exact path="/avdelning/:id" component={Section} />
         <Route exact path="/avdelning/:id/:product" component={ProductPage} />
         <Route exact path="/kundkorg" component={Cart} />
         <Route exact path="/projektet" component={About} />

@@ -1,7 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 
-const Breadcrumb = ({ sections }) => {
+const Breadcrumb = ({ sections, location }) => {
+  if (location.pathname === "/") return null;
+
   return (
     <div>
       <ul className="breadcrumb">
@@ -23,4 +25,4 @@ const Breadcrumb = ({ sections }) => {
   );
 };
 
-export default Breadcrumb;
+export default withRouter(Breadcrumb);

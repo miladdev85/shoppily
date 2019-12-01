@@ -14,7 +14,7 @@ const ProductPage = ({ match }) => {
       const response = await axios.get(
         `${products}?name_contains=${match.params.product.split("-").join(" ")}`
       );
-      console.log(response.data[0]);
+
       setProduct(response.data[0]);
       setIsLoading(false);
     };
@@ -24,10 +24,30 @@ const ProductPage = ({ match }) => {
     return () => (didCancel = true);
   }, [match.params.product]);
 
+  // Add more details, add to cart and quantity input. 2019-12-02
+
   return (
-    <div>
-      <h1>Product Page Coming Soon</h1>
-    </div>
+    <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="productdetails">
+          <div className="row">
+            <div className="col-12 col-md-6 col-lg-4">
+              <img
+                src={product.imageUrl}
+                alt="product"
+                style={{ objectFit: "cover", width: "100%", height: "350px" }}
+              />
+            </div>
+            <div className="col">
+              <p>{product.description}</p>
+            </div>
+          </div>
+          <p style={{ marginTop: "4rem", textAlign: "center" }}>More details coming soon...</p>
+        </div>
+      )}
+    </>
   );
 };
 
