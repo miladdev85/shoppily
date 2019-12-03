@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Loading from "./Loading";
 import axios from "axios";
+import CustomButton from "./CustomButton";
+import { CartContext } from "./Contexts/CartContext";
 import { products } from "./Utils/Network";
 
 const ProductPage = ({ match }) => {
   const [product, setProduct] = useState({});
+  const [isAdding, setIsAdding] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const { addProduct } = useContext(CartContext);
 
   useEffect(() => {
     let didCancel = false;
@@ -24,27 +28,41 @@ const ProductPage = ({ match }) => {
     return () => (didCancel = true);
   }, [match.params.product]);
 
-  // Add more details, add to cart and quantity input. 2019-12-02
+  const handleAdd = () => {
+    setIsAdding(true);
+    setTimeout(() => {
+      addProduct(product);
+      setIsAdding(false);
+    }, 1000);
+  };
 
   return (
     <>
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="productdetails">
-          <div className="row">
-            <div className="col-12 col-md-6 col-lg-4">
-              <img
-                src={product.imageUrl}
-                alt="product"
-                style={{ objectFit: "cover", width: "100%", height: "350px" }}
-              />
+        <div className="row productdetails">
+          <div className="col-12 col-md-6 col-lg-4">
+            <img
+              src={product.imageUrl}
+              alt="product"
+              style={{ objectFit: "cover", width: "100%", height: "350px", display: "block" }}
+            />
+          </div>
+          <div className="col productdetails__infocontent">
+            <div>
+              <h1 className="productdetails__title">{product.name}</h1>
+              <p className="productdetails__price">
+                {product.price} kr <span className="productdetails__vat">inkl. moms</span>
+              </p>
+              <p className="productdetails__description">{product.description}</p>
             </div>
-            <div className="col">
-              <p>{product.description}</p>
+            <div className="productdetails__button">
+              <CustomButton disabled={isAdding} onClick={handleAdd}>
+                {isAdding ? "Lägger till produkten" : "Lägg till i varukorgen"}
+              </CustomButton>
             </div>
           </div>
-          <p style={{ marginTop: "4rem", textAlign: "center" }}>More details coming soon...</p>
         </div>
       )}
     </>

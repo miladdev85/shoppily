@@ -1,0 +1,35 @@
+.productdetails {
+  &__infocontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  &__price {
+    font-size: 2rem;
+  }
+  &__vat {
+    font-size: 1.4rem;
+    color: rgb(182, 182, 182);
+  }
+  &__description {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  &__button {
+    margin: 2.5rem 0rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .productdetails {
+    &__infocontent {
+      margin-top: 0;
+    }
+
+    &__button {
+      margin: 0;
+    }
+  }
+}
