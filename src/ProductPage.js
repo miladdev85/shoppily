@@ -41,7 +41,7 @@ const ProductPage = ({ match }) => {
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="row productdetails">
+        <div className="row productdetails fadeIn">
           <div className="col-12 col-md-6 col-lg-4">
             <img
               src={product.imageUrl}

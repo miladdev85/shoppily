@@ -11,7 +11,7 @@ const SectionItem = ({ location, item, addItem, selectedProduct, disableButtons 
   };
 
   return (
-    <div className="productwrapper col-6 col-md-3">
+    <div className="productwrapper col-6 col-md-3 fadeIn">
       <div className="shadow">
         <div className="imagewrapper">
           <div style={{ backgroundImage: `url(${item.imageUrl})` }} className="product__image" />
