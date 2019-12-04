@@ -10,7 +10,7 @@ const ProductPage = ({ match, history }) => {
   const [isAdding, setIsAdding] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { addProduct } = useContext(CartContext);
-  console.log(match);
+
   useEffect(() => {
     let didCancel = false;
     const getItem = async () => {
