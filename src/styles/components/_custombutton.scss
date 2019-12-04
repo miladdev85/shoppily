@@ -17,12 +17,30 @@
   }
 }
 
-.altButton {
+.greenButton {
+  border: none;
+  background-color: rgb(81, 211, 69);
+  &:active {
+    background-color: rgb(82, 154, 75);
+    color: white;
+  }
+}
+
+.pinkButton {
   border: 1px solid rgb(186, 113, 113);
   background-color: rgb(186, 113, 113);
   &:active {
     background-color: rgb(236, 203, 203);
     color: black;
+  }
+}
+
+.blueButton {
+  border: 1px solid rgb(113, 162, 186);
+  background-color: rgb(113, 162, 186);
+  &:active {
+    background-color: rgb(85, 123, 142);
+    color: white;
   }
 }
 
@@ -40,7 +58,26 @@
     }
   }
 
-  .altButton {
+  .greenButton {
+    &:hover {
+      background-color: rgb(86, 187, 77);
+    }
+    &:active {
+      background-color: rgb(23, 133, 13);
+    }
+  }
+  .blueButton {
+    &:hover {
+      border: 1px solid rgb(68, 153, 196);
+      background-color: rgb(68, 153, 196);
+    }
+    &:active {
+      background-color: rgb(85, 123, 142);
+      color: white;
+    }
+  }
+
+  .pinkButton {
     &:hover {
       background-color: rgb(159, 93, 93);
       border: 1px solid rgb(159, 93, 93);

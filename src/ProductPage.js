@@ -5,12 +5,12 @@ import CustomButton from "./CustomButton";
 import { CartContext } from "./Contexts/CartContext";
 import { products } from "./Utils/Network";
 
-const ProductPage = ({ match }) => {
+const ProductPage = ({ match, history }) => {
   const [product, setProduct] = useState({});
   const [isAdding, setIsAdding] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { addProduct } = useContext(CartContext);
-
+  console.log(match);
   useEffect(() => {
     let didCancel = false;
     const getItem = async () => {
@@ -36,6 +36,13 @@ const ProductPage = ({ match }) => {
     }, 1000);
   };
 
+  // Using params from match so we can handle users who visit the site by a direct link to a product
+  // Fits our needs right now, but could get troublesome if we have subtrees etc.
+
+  const handleBack = () => {
+    history.push(`/avdelning/${match.params.id}`);
+  };
+
   return (
     <>
       {isLoading ? (
@@ -58,7 +65,10 @@ const ProductPage = ({ match }) => {
               <p className="productdetails__description">{product.description}</p>
             </div>
             <div className="productdetails__button">
-              <CustomButton disabled={isAdding} onClick={handleAdd}>
+              <CustomButton styling="blueButton" onClick={handleBack}>
+                Tillbaka
+              </CustomButton>
+              <CustomButton styling="greenButton" disabled={isAdding} onClick={handleAdd}>
                 {isAdding ? "Lägger till produkten" : "Lägg till i varukorgen"}
               </CustomButton>
             </div>

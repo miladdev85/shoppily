@@ -124,7 +124,7 @@ export class SignIn extends Component {
           >
             {!formValid && <p>{errors.confirmPassword}</p>}
           </FormInput>
-          <CustomButton disabled={!formValid} type="submit">
+          <CustomButton disabled={!formValid} styling="blackButton" type="submit">
             SKAPA KONTO
           </CustomButton>
         </form>

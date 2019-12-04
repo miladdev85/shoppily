@@ -28,7 +28,7 @@ const Cart = () => {
       ))}
       {products.length > 0 && (
         <div className="actionsection">
-          <CustomButton onClick={resetCart} altColor={true}>
+          <CustomButton onClick={resetCart} styling="pinkButton">
             Töm varukorgen
           </CustomButton>
         </div>

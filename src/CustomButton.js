@@ -1,8 +1,8 @@
 import React from "react";
 
-const CustomButton = ({ children, altColor, ...otherProps }) => {
+const CustomButton = ({ children, styling, ...otherProps }) => {
   return (
-    <button className={`${altColor ? "altButton" : "blackButton"} custom__button`} {...otherProps}>
+    <button className={`${styling} custom__button`} {...otherProps}>
       {children}
     </button>
   );

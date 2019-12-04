@@ -35,7 +35,7 @@ const ResetPassword = () => {
           name="email"
           placeholder="Ange din e-post"
         />
-        <CustomButton type="submit" altColor={true}>
+        <CustomButton type="submit" styling="pinkButton">
           BEGÄR ÅTERSTÄLLNING
         </CustomButton>
       </form>

@@ -61,11 +61,11 @@ export class SignIn extends Component {
             placeholder="Ange ditt lösenord"
           />
           <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-            <CustomButton disabled={!isEnabled} type="submit">
+            <CustomButton disabled={!isEnabled} styling="blackButton" type="submit">
               LOGGA IN
             </CustomButton>
             <Link to="/aterstall">
-              <CustomButton altColor={true}>GLÖMT LÖSENORD</CustomButton>
+              <CustomButton styling="pinkButton">GLÖMT LÖSENORD</CustomButton>
             </Link>
           </div>
         </form>
