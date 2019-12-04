@@ -7,17 +7,17 @@ export default [
   {
     question: "Berätta om detta projekt",
     answer:
-      "Efter Movify projektet ville jag fördjupa mig mer inom CSS och SCSS. CSS har varit något som hamnat lite i skymundan under min utvecklingsresa men i och med detta projekt känner jag mig mycket tryggare med det. Sidan är något enklare än Movify men CSS delen är mer komplicerat och har åstadkommits utan CSS Framework förutom enstaka tillfällen där jag använt mig av Bootstrap Grid för mobila vyer."
+      "Efter Movify projektet ville jag fördjupa mig mer inom CSS och SCSS. Designen är till stora delar en PSD-to-HTML/CSS med lite förbättringar och anpassningar."
   },
   {
     question: "Vad har varit den stora utmaningen?",
     answer:
-      "Att tänka ut en design med hög användarupplevelse som fungerar bra på mobilen och på större skärmar. Sedan har kombinationen av ett Headless CMS + MongoDB + Heroku + Netlify haft sina egna utmaningar, men det har varit intressant och lärorikt."
+      "Kombinationen av ett Headless CMS + MongoDB + Heroku + Netlify haft sina egna utmaningar, men det har varit intressant och lärorikt. Sedan var inte PSD designen som jag använt mig av mobilanpassad vilket har inneburit att jag fått förbättra och anpassa den på egen hand."
   },
   {
     question: "Hur känner du inför React då?",
     answer:
-      "Jag känner mig trygg med React och tycker att min grund är väldigt stadig och att jag är redo att ta nästa kliv i min utveckling."
+      "Jag känner mig trygg med React och tycker att min grund är väldigt stadig och att jag är redo att ta nästa kliv i min utveckling. Jag tycker att jag behärskar Hooks, Context, Async/Promises/API, Router samt strukturen av komponenter och ser fram emot nästa projekt!"
   },
   {
     question: "Vad är nästa steg?",
@@ -25,7 +25,7 @@ export default [
       'Nästa steg är att bygga en bloggportal där jag kommer att använda mig av React Hooks, Context, Router samt Firestore. Vidare vill jag utöka mitt egna bibliotek med "self contained components" som kan återanvändas i kommande projekt.'
   },
   {
-    question: "Något speciellt du vill skryta om i detta projekt?",
+    question: "Något speciellt som du är extra stolt över i detta projekt?",
     answer:
       'Jag är nöjd med användandet av Context samt formulärerna på "Logga in" sidan. Jag tycker att formulärerna ser bra ut och har bra funktionalitet samt att de är enkla att återanvända i andra projekt.'
   },
