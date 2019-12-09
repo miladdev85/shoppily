@@ -1,8 +1,10 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
+// Using withRouter HOC to get location object as props. We use location when sending to user to the correct product.
+
 const SectionItem = ({ location, item, addItem, selectedProduct, disableButtons }) => {
-  //Function to provide easier url path.
+  // Function to provide easier url path that we use in Link.
   const convertItemName = str => {
     return str
       .split(" ")

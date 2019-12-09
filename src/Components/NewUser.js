@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FormInput from "./FormInput";
 import CustomButton from "./CustomButton";
-import { validateMail } from "./Utils/Functions";
+import { validateMail } from "../Utils/Functions";
 
 export class SignIn extends Component {
   state = {
@@ -20,7 +20,7 @@ export class SignIn extends Component {
     formValid: false
   };
 
-  // Set state with input values and if there are any errors. Error checking will be done in the validateForm function which the ui and other functionalities depend on.
+  // Set state with input values and if there are any errors. We use these errors in the validateForm function which we run after setting state here.
   onChange = e => {
     e.preventDefault();
     const { name, value } = e.target;
@@ -48,7 +48,7 @@ export class SignIn extends Component {
         inputs: { ...this.state.inputs, [name]: value },
         errors: { ...this.state.errors, [name]: errorMessage }
       },
-      () => this.validateForm()
+      this.validateForm
     );
   };
 
@@ -56,11 +56,12 @@ export class SignIn extends Component {
   validateForm = () => {
     let inputsValid = true;
     let noErrors = true;
-    // Check if all inputs have a length higher than 1
+    // Check if all inputs have a length higher than 1. If not, set inputsValid to false.
     Object.values(this.state.inputs).forEach(val => val.length < 1 && (inputsValid = false));
-    // Check if all erorrs are empty
+    // Check if all erorrs are empty. If not, set noErrors to false.
     Object.values(this.state.errors).forEach(val => val.length > 0 && (noErrors = false));
 
+    // If inputsValid true AND noErrors is true, we validate the form.
     if (inputsValid && noErrors) {
       this.setState({ formValid: true });
     } else {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FormInput from "./FormInput";
 import CustomButton from "./CustomButton";
 import { Link } from "react-router-dom";
-import { validateMail } from "./Utils/Functions";
+import { validateMail } from "../Utils/Functions";
 
 export class SignIn extends Component {
   state = {
@@ -13,9 +13,9 @@ export class SignIn extends Component {
     }
   };
 
+  // Validating email and setting state. If email contains error, put error in state. We disable submit button if error in state is present.
   onChange = e => {
     let errorMessage = "";
-    e.preventDefault();
     const { name, value } = e.target;
 
     if (name === "email") {
@@ -33,8 +33,11 @@ export class SignIn extends Component {
   };
 
   render() {
-    const { email, password, errorMessage } = this.state;
+    const { email, password, errorMessage, showModal } = this.state;
+
+    // Set truthy or falsy based on given conditions. Use this variable to determine if button should be disabled or not.
     const isEnabled = email.length > 0 && password.length > 0 && errorMessage.email < 1;
+
     return (
       <div>
         <h2>Jag har redan ett konto</h2>

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import CartItem from "./CartItem";
 import CustomButton from "./CustomButton";
-import { CartContext } from "./Contexts/CartContext";
+import { CartContext } from "../Contexts/CartContext";
 
 const Cart = () => {
+  // Importing context functions for handling cart items.
   const { products, addProduct, subtractProduct, resetCart } = useContext(CartContext);
 
   return (
