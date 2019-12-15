@@ -33,7 +33,7 @@ export class SignIn extends Component {
   };
 
   render() {
-    const { email, password, errorMessage, showModal } = this.state;
+    const { email, password, errorMessage } = this.state;
 
     // Set truthy or falsy based on given conditions. Use this variable to determine if button should be disabled or not.
     const isEnabled = email.length > 0 && password.length > 0 && errorMessage.email < 1;
