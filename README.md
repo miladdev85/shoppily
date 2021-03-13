@@ -1,6 +1,6 @@
-### About this project
+## Note: Not maintained...
 
-**Note:** I have not maintained this project for almost a year now.
+### About this project
 
 A webshop built in React.<br/>
 **Keywords:** React, Context, Router, Async / Await, Headless CMS (Strapi), SCSS & CSS, Responsive design, ES6+
